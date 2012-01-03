@@ -49,7 +49,9 @@ var gitgraph = function(args){
 			dojo.forEach(this.total, render);
 			context.fillStyle = 'rgb(51, 102, 153)';
 			dojo.forEach(this.own, render);
-		}
+		};
+		
+		return this.graphContainer;
 	}
 };
 
