@@ -81,15 +81,17 @@ var Gitgraph = function(args){
 		};
 		
 		this.kickStart = function(){
-			//Get particiption data
-			dojo.xhrGet({
-				url: 'http://logicalcognition.com/files/gitgraph.php?user='+args.user+'&repo='+args.repo,
-				handleAs: 'json',
-				preventCache: true,
-				load: dojo.hitch(this,function(data){
-					this.data = data;
-					this.go();
-				})
+			dojo.ready(this, function(){
+				//Get particiption data
+				dojo.xhrGet({
+					url: 'http://logicalcognition.com/files/gitgraph.php?user='+args.user+'&repo='+args.repo,
+					handleAs: 'json',
+					preventCache: true,
+					load: dojo.hitch(this,function(data){
+						this.data = data;
+						this.go();
+					})
+				});	
 			});
 		};
 		
@@ -97,7 +99,7 @@ var Gitgraph = function(args){
 		this.height = 20;
 		this.node 	= args.domNode ? args.domNode : document.body;
 		
-		if(!dojo)
+		if(!window.dojo)
 			this.loadScript('http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js',this.kickStart.bind(this));
 		else
 			this.kickStart.bind(this)();
