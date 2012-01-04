@@ -31,10 +31,10 @@ var gitgraph = function(args){
 			//Populate canvas
 			this.graphContainer.innerHTML = '';
 			this.canvas	= dojo.create('canvas',{width:this.width,height:this.height,style:'position:relative;margin-top:11px;'},this.graphContainer);
-			dojo.create('br',{},this.graphContainer);
+
 			var img = dojo.create('img',{
 				src:'https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/dossier/participation_legend.png?1315937721',
-				style:'position:relative;'
+				style:'position:relative;top:-6px'
 			},this.graphContainer);
 			var context	= this.canvas.getContext("2d"),
 				width	= this.width / this.total.length,
