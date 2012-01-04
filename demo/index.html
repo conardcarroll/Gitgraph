@@ -41,21 +41,15 @@ var graph = new Gitgraph({
   domNode : document.body,  // domNode to attach to (optional)
 });</pre>
 			<span class="examples">Issues & Features</span><br>
-			Report any issues and features (I'm sure I missed a lot of stuff) on <a id="githubLink1">Github</a>.
+			Report any issues and features (I'm sure I missed a lot of stuff) on <a href="https://github.com/bouchon/Gitgraph" target="_blank">Github</a>.
 		</div>
-		<a id="githubLink2"><img style="cursor:hand;cursor:pointer; position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
+		<a href="https://github.com/bouchon/Gitgraph" target="_blank"><img style="cursor:hand;cursor:pointer; position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
   	</body>
 	<script>
 		var graph = new Gitgraph({ 
 		  user    : 'bouchon',      // any github username
 		  repo    : 'coweb',        // name of repo
 		  domNode : document.getElementById('demoHolder'),  // domNode to attach to (optional)
-		});
-		dojo.connect(dojo.byId('githubLink1'),'onclick',function(){
-			window.location = 'https://github.com/bouchon/Gitgraph'
-		});
-		dojo.connect(dojo.byId('githubLink2'),'onclick',function(){
-			window.location = 'https://github.com/bouchon/Gitgraph'
 		});
 	</script>
 </html>
