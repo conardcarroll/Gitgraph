@@ -81,13 +81,6 @@ var Gitgraph = function(args){
 		};
 		
 		this.kickStart = function(){
-			//Build canvas
-			this.graphContainer = dojo.create('div',{
-				innerHTML:'<img src="http://biganimals.com/wp-content/themes/biganimals/images/loading_transparent_4.gif"/>',
-				style:'border-radius:3px;border:1px solid #E5E5E5;'
-				+'background:white;height:55px;width:430px;text-align:center;'
-			},this.node);
-
 			//Get particiption data
 			dojo.xhrGet({
 				url: 'http://logicalcognition.com/files/gitgraph.php?user='+args.user+'&repo='+args.repo,
@@ -107,6 +100,12 @@ var Gitgraph = function(args){
 		this.loadScript('http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js',this.kickStart.bind(this));
 	}
 	
-	return this;
+	this.graphContainer = document.createElement('div');
+	this.graphContainer.innerHTML = '<img src="http://biganimals.com/wp-content/themes/biganimals/images/loading_transparent_4.gif"/>';
+	this.graphContainer.style.cssText = 'border-radius:3px;border:1px solid #E5E5E5;'
+	+'background:white;height:55px;width:430px;text-align:center;';
+	this.node.appendChild(this.graphContainer);
+	
+	return this.graphContainer;
 };
 
