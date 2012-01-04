@@ -34,7 +34,7 @@ var gitgraph = function(args){
 
 			var img = dojo.create('img',{
 				src:'https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/dossier/participation_legend.png?1315937721',
-				style:'position:relative;top:-6px'
+				style:'position:relative;top:-4px'
 			},this.graphContainer);
 			var context	= this.canvas.getContext("2d"),
 				width	= this.width / this.total.length,
