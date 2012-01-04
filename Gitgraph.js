@@ -98,8 +98,6 @@ var Gitgraph = function(args){
 					this.go();
 				})
 			});
-			
-			return this.graphContainer;
 		};
 		
 		this.width 	= 416;
@@ -108,5 +106,7 @@ var Gitgraph = function(args){
 		
 		this.loadScript('http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js',this.kickStart.bind(this));
 	}
+	
+	return this;
 };
 
