@@ -13,13 +13,13 @@ Pure JS github participation graph using canvas element. To see it in action, vi
 
 ##Usage
 
-1. Paste into your page's HEAD
+* Paste into your page's HEAD
 
 	```console
 	<script src="http://logicalcognition.com/Projects/Gitgraph/Gitgraph.js"></script>
 	```
 
-2. From within a script tag or a JS file
+* From within a script tag or a JS file
 	
 	```console
 	var graph = new Gitgraph({ 
@@ -27,6 +27,12 @@ Pure JS github participation graph using canvas element. To see it in action, vi
 	  repo    : 'coweb',                  // name of repo
 	  domNode : document.body,  // domNode to attach to (optional)
 	});
+	```
+
+* Or use it as a jQuery plugin
+
+	```console
+	$('#demoHolder').gitgraph({user:'bouchon',repo:'coweb'});
 	```
 
 ##Issues & Features

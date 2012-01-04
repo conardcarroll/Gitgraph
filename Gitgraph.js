@@ -114,3 +114,19 @@ var Gitgraph = function(args){
 	return this.graphContainer;
 };
 
+//Make Jquery folks happy
+if (window.jQuery) {
+    jQuery.fn.gitgraph = function (args) {
+		if(!args || !args.user || !args.repo){
+			throw new Error('Gitgraph: missing user and/or repo arg ');
+		}else{
+			this.each(function () {
+	            var view = new Gitgraph({ 
+	                user    : args.user,     
+	                domNode : $(this)[0], 
+	                repo : args.repo
+	            });
+	        });
+		}
+    };
+}

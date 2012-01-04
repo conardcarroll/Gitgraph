@@ -21,6 +21,7 @@
 			<div id="featureHolder">
 				<ul>
 					<li>Uses canvas element similar to how Github does it</li>
+					<li>Can be used as a jQuery plugin</li>
 					<li>All data 100% live</li>
 					<li>No additional style sheet required</li>
 					<li>Compatible with all JS frameworks</li>
@@ -30,16 +31,19 @@
 		</div>
 		<div id="usage">
 			<span class="examples">Usage</span><br>
-			1. Paste into your page's HEAD
+			Paste into your page's HEAD
 			<pre class="prettyprint code">
 &lt;script src="http://logicalcognition.com/Projects/Gitgraph/Gitgraph.js"&gt;&lt;/script&gt;</pre>
-			2. From within a &lt;script&gt; tag or a JS file
+			From within a &lt;script&gt; tag or a JS file
 			<pre class="prettyprint code">
 var graph = new Gitgraph({ 
   user    : 'bouchon',      // any github username
   repo    : 'coweb',        // name of repo
   domNode : document.body,  // domNode to attach to (optional)
 });</pre>
+			Or use it as a jQuery plugin
+			<pre class="prettyprint code">
+$('#demoHolder').gitgraph({user:'bouchon',repo:'coweb'});</pre>
 			<span class="examples">Issues & Features</span><br>
 			Report any issues and features (I'm sure I missed a lot of stuff) on <a href="https://github.com/bouchon/Gitgraph" target="_blank">Github</a>.
 		</div>
