@@ -1,12 +1,57 @@
 <!DOCTYPE html> 
-<html lang="en">
-	<head>
-	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript"></script>
-	<script src="../gitgraph.js"></script>
-	</head>
-	<body>
-	</body>
+<html>
+  	<head>
+		<title>gitgraph</title>
+		<meta content="pure js github participation graph" name="description" />
+		<link href="http://fonts.googleapis.com/css?family=Amaranth:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="demo.css" type="text/css" />
+		<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript"></script>
+		<script src="../gitgraph.js"></script>
+  	</head>
+	<body onload="prettyPrint()">
+		<div class="title">gitgraph</div>
+		<div class="subtitle">
+			pure js github participation graph
+		</div>
+		<div id="demo">
+			<span class="examples">Example</span><span class="features">Features</span><br>
+			<div id="demoHolder"></div>
+			<div id="featureHolder">
+				<ul>
+					<li>Single JS file</li>
+					<li>Uses canvas element similar to how Github does it</li>
+					<li>All data 100% live</li>
+					<li>No additional style sheet required</li>
+					<li>Compatible with all JS frameworks</li>
+					<li><a href="http://sam.zoy.org/wtfpl/" target="_blank">WTFPL</a> license</li>
+				</ul>
+			</div>
+		</div>
+		<div id="usage">
+			<span class="examples">Usage</span><br>
+			1. Paste into your page's HEAD
+			<pre class="prettyprint code">
+&lt;script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="http://logicalcognition.com/Projects/gitview/gitview.js"&gt;&lt;/script&gt;</pre>
+			2. From within a &lt;script&gt; tag or a JS file
+			<pre class="prettyprint code">
+var graph = new gitgraph({ 
+  user    : 'bouchon',      // any github username
+  repo    : 'coweb',        // name of repo
+  domNode : document.body,  // domNode to attach to (optional)
+});</pre>
+			<span class="examples">Issues & Features</span><br>
+			Report any issues and features (I'm sure I missed a lot of stuff) on <a href="http://github.com/bouchon/gitgraph">Github</a>.
+		</div>
+		<a href="http://github.com/bouchon/gitgraph"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
+  	</body>
 	<script>
-		var g = new gitgraph({user:'bouchon',repo:'coweb'});
+		var graph = new gitgraph({ 
+		  user    : 'bouchon',      // any github username
+		  repo    : 'coweb',        // name of repo
+		  domNode : dojo.byId('demoHolder'),  // domNode to attach to (optional)
+		});
 	</script>
 </html>
