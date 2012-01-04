@@ -29,6 +29,7 @@ Pure JS github participation graph using canvas element. To see it in action, vi
 	  domNode : document.body,  // domNode to attach to (optional)
 	});
 	```
+
 ##Issues & Features
 
 File under the Issues section and feel free to fork and pull-request
