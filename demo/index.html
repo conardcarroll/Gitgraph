@@ -6,6 +6,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Amaranth:400,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="demo.css" type="text/css" />
 		<link href="google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
 		<script type="text/javascript" src="google-code-prettify/prettify.js"></script>
 		<script src="../Gitgraph.js"></script>
   	</head>
@@ -40,15 +41,21 @@ var graph = new Gitgraph({
   domNode : document.body,  // domNode to attach to (optional)
 });</pre>
 			<span class="examples">Issues & Features</span><br>
-			Report any issues and features (I'm sure I missed a lot of stuff) on <a href="http://github.com/bouchon/Gitgraph">Github</a>.
+			Report any issues and features (I'm sure I missed a lot of stuff) on <a id="githubLink1">Github</a>.
 		</div>
-		<a href="http://github.com/bouchon/Gitgraph"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
+		<a id="githubLink2"><img style="cursor:hand;cursor:pointer; position: absolute; top: 0; right: 0; border: 0;" src="images/fork.png" alt="Fork me on GitHub"></a>
   	</body>
 	<script>
 		var graph = new Gitgraph({ 
 		  user    : 'bouchon',      // any github username
 		  repo    : 'coweb',        // name of repo
 		  domNode : document.getElementById('demoHolder'),  // domNode to attach to (optional)
+		});
+		dojo.connect(dojo.byId('githubLink1'),'onclick',function(){
+			window.location = 'https://github.com/bouchon/Gitgraph'
+		});
+		dojo.connect(dojo.byId('githubLink2'),'onclick',function(){
+			window.location = 'https://github.com/bouchon/Gitgraph'
 		});
 	</script>
 </html>

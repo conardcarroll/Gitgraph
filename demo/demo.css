@@ -84,3 +84,8 @@ body{
 	line-height: 18px;
 	margin: 5px 0 30px 0;
 }
+
+#githubLink1{
+	cursor:hand;cursor:pointer;
+	text-decoration:underline;
+}
