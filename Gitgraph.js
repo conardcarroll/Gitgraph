@@ -97,7 +97,10 @@ var Gitgraph = function(args){
 		this.height = 20;
 		this.node 	= args.domNode ? args.domNode : document.body;
 		
-		this.loadScript('http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js',this.kickStart.bind(this));
+		if(!dojo)
+			this.loadScript('http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js',this.kickStart.bind(this));
+		else
+			this.kickStart.bind(this)();
 	}
 	
 	this.graphContainer = document.createElement('div');
