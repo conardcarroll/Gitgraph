@@ -1,0 +1,32 @@
+{
+    "name": "gitgraph",
+    "version": "1.0",
+    "title": "Gitgraph",
+    "author": {
+        "name": "Paul Bouchon",
+        "url": "http://logicalcognition.com/"
+    },
+    "licenses": [
+        {
+            "type": "WTFPL",
+            "url": "http://sam.zoy.org/wtfpl/"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1"
+    },
+    "description": "Builds a widget of Github repositories mimicking the Github Dashboard look and feel exactly.",
+    "keywords": [
+        "github",
+        "repository",
+        "repositories",
+        "git",
+		"graph"
+    ],
+    "homepage": "http://gitgraph.logicalcognition.com/",
+	"docs": "http://gitgraph.logicalcognition.com/",
+    "files": [
+        "Gitgraph.js"
+    ],
+	"demo": "http://gitgraph.logicalcognition.com/"
+}
